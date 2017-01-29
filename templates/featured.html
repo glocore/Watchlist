@@ -1,0 +1,71 @@
+<div class="container" style="width: 100%; top: 0">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src={{backdrops[0].poster}} alt="backdrop" height="345">
+      </div>
+
+      <div class="item">
+        <img src={{backdrops[1].poster}} alt="backdrop" height="345">
+      </div>
+
+      <div class="item">
+        <img src={{backdrops[2].poster}} alt="backdrop" height="345">
+      </div>
+
+      <div class="item">
+        <img src={{backdrops[3].poster}} alt="backdrop" height="345">
+      </div>
+
+      <div class="item">
+        <img src={{backdrops[4].poster}} alt="backdrop" height="345">
+      </div>
+    </div>
+
+
+  </div>
+</div><!--carousel ends-->
+
+<br><br>
+
+<div class="container" ng-repeat="item in featuredItems" style="width: 100%">
+  <h4>{{item.title}}</h4>
+  <br>
+  <div class="row">
+
+    <div class="col-xs-3 col-sm-3 col-md-3">
+      <img src={{item.poster}} alt="poster">
+    </div>
+
+    <div class="col-xs-9 col-sm-9 col-md-9">
+      {{item.overview}}<br>
+    </div>
+
+  </div>
+  <br>
+  <hr>
+
+</div>
+
+
+
+
+
+<!--
+<div ng-repeat="backdrop in backdrops">
+  <img src={{backdrop.poster}} alt="backdrop">
+</div>
+-->

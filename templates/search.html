@@ -1,0 +1,22 @@
+<div style="background-color: red; color: white; position: fixed; top: 0; width: 100%; z-index: 99">{{errorText}}</div>
+<h1>Search Results: </h1>
+<br>
+<div ng-repeat="result in results track by $index" class="container" style="width: 100%">
+
+  <h4>{{result.title}}</h4>
+  <br>
+  <div class="row">
+    <div class="col-xs-3 col-sm-3 col-md-3">
+    <img src={{result.poster}} alt="poster" />
+    </div>
+
+    <div class="col-xs-9 col-sm-9 col-md-9">
+    {{result.overview}}<br>
+    </div>
+
+  </div><!--row-->
+  <br>
+  <button ng-click="addToWishlist($index)" class="btn btn-primary">+ Add to Watchlist</button>
+  <hr>
+
+</div> <!--result and container-->
